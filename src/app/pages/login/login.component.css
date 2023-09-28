@@ -6,11 +6,12 @@
   background-color: #232226;
 }
 .form-container {
-  max-width: 400px;
+  max-width: 900px;
   width: 100%;
   padding: 20px;
-  border: 1px solid hsl(0, 0%, 0%);
-  border-radius: 5px;
+  border: 3px solid hsl(0, 0%, 0%);
+  border-radius: 10px;
+  display: flex;
 }
 
 .form-label {
@@ -18,20 +19,43 @@
 }
 
 .btn-cor {
-  background-color: #5000CA;
+  background-color: #5000ca;
   color: white;
 }
 
 .btn {
-  width: 100%;
+  width: 300px;
 }
 
 .img-fluir {
-  background: url('/src/assets/images/cat-login.png'), lightgray 0px -20.647px / 98.425% 104.548% no-repeat;
+  background: url("/src/assets/images/cat-login.png"),
+    lightgray 0px -20.647px / 98.425% 104.548% no-repeat;
 }
 
 .title-form {
   color: white;
-  text-shadow: 1px 1px 40px #88ff00cb,
-3px 3px 40px #88ff00cb, 3px 3px 40px #88ff00cb, 3px 3px 40px #88ff00cb;
+  text-shadow: 1px 1px 40px #88ff00cb, 3px 3px 40px #88ff00cb,
+    3px 3px 40px #88ff00cb, 3px 3px 40px #88ff00cb;
+}
+
+.imagem-lateral {
+  max-width: 400px; /* Ajuste a largura conforme necessário */
+  height: auto;
+  right: 50px; /* Espaço entre a imagem e o formulário */
+  position: relative;
+}
+
+.center-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajuste a altura conforme necessário */
+}
+
+.form-control {
+  width: 300px;
+}
+
+.form-outline {
+  right: 300px;
 }

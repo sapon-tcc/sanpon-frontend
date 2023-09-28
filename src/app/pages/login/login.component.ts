@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  gatinhoImagem: string = 'assets/images/cat-login.png';
 }
