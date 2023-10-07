@@ -1,0 +1,44 @@
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  width: 100%;
+  max-height: 40vh; /* Ajuste a altura máxima como desejado */
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+  left: 10px; /* Ajuste a posição horizontal conforme necessário */
+  top: 20%; /* Ajuste a posição vertical conforme necessário */
+  padding: 5px;
+}
+
+.imagem-icone {
+  width: 40%;
+}
+
+.text-sanpon {
+  position: absolute;
+  left: 35%; /* Ajuste a posição horizontal conforme necessário */
+  top: 50%; /* Ajuste a posição vertical conforme necessário */
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.text-icon {
+  position: absolute;
+  left: 10%; /* Ajuste a posição horizontal conforme necessário */
+  top: 90%; /* Ajuste a posição vertical conforme necessário */
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.text-titulo {
+  font-weight: bold;
+  color: white;
+}

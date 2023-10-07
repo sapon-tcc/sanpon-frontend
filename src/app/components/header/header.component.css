@@ -1,3 +1,11 @@
 .bg-header {
     background-color: #302f34;
 }
+
+.barra-pesquisar {
+  width: 400px;
+}
+
+.pesquisar-input {
+  border-radius: 40px;
+}

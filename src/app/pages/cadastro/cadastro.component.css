@@ -34,12 +34,12 @@
 
 .title-form {
   color: white;
-  text-shadow: 1px 1px 40px #88ff00cb, 3px 3px 40px #88ff00cb,
-    3px 3px 40px #88ff00cb, 3px 3px 40px #88ff00cb;
+  text-shadow: 1px 1px 40px #FE0472, 3px 3px 40px #FE0472,
+    3px 3px 40px #FE0472, 3px 3px 40px #FE0472;
 }
 
 .imagem-lateral {
-  max-width: 500px; /* Ajuste a largura conforme necessário */
+  max-width: 530px; /* Ajuste a largura conforme necessário */
   height: auto;
   right: 50px; /* Espaço entre a imagem e o formulário */
   position: relative;

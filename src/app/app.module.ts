@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
 // import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
