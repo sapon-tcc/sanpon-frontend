@@ -5,3 +5,23 @@ body {
     background-color: #232226;
 }
 
+/* styles.css ou styles.scss */
+.custom-spinner .ui-spinner {
+    width: 50px; /* Largura personalizada do spinner */
+    height: 50px; /* Altura personalizada do spinner */
+    margin: auto; /* Centralizar o spinner horizontalmente */
+    position: fixed; /* Para manter o spinner no centro da tela */
+    top: 50%; /* Centralizar o spinner verticalmente */
+    left: 50%; /* Centralizar o spinner horizontalmente */
+    transform: translate(-50%, -50%); /* Centralizar o spinner horizontal e verticalmente */
+}
+
+/* styles.css ou styles.scss */
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Define uma alta camada para garantir que o spinner esteja acima de outros elementos, se houver */
+  }
+  

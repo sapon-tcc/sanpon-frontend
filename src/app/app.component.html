@@ -1,2 +1,15 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+
+<div *ngIf="loadingService.loading$ | async; else elseBlock">
+  <div class="spinner-container">
+    <p-progressSpinner styleClass="custom-spinner"></p-progressSpinner>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</ng-template>
+
+  
+
+

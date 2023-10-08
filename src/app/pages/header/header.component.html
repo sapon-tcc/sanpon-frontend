@@ -24,6 +24,7 @@
       <div class="input-group">
           <!-- Campo de entrada de texto -->
           <input 
+            (keyup.enter)="searchBooks()" [(ngModel)]="query"
             type="text" 
             class="form-control search-input bg-dark border-0" 
             placeholder="Pesquisar por livro, gênero e autor." 
