@@ -1,15 +1,43 @@
-<header class="bg-header p-4 rounded-bottom">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+<header class="bg-header p-2 rounded-bottom">
+
+  <div class="d-block d-md-none pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        <h4 class="text-white">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark border-0">
+      <button class="border-0 navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="container-fluid d-none d-md-flex justify-content-between align-items-center">
     <div class="flex">
       <i class="pi pi-home mr-3 " style="color: #ffffff;"></i>
-      <i class="pi pi-globe mr-2 " style="color: #ffffff;"></i>
+      <i class="pi pi-globe mr-3 " style="color: #ffffff;"></i>
     </div>
-    <div class="barra-pesquisar">
-      <input type="text" class="form-control rounded-pill pesquisar-input" placeholder="Pesquisar..." style="width: 100%;">
+    
+    <div>
+      <div class="input-group">
+          <!-- Campo de entrada de texto -->
+          <input 
+            type="text" 
+            class="form-control search-input bg-dark border-0" 
+            placeholder="Pesquisar por livro, gênero e autor." 
+            aria-label="Pesquisar"
+            aria-describedby="basic-addon1"
+          >
+      </div>
     </div>
+
+    
     <div class="profile-section d-flex align-items-center">
-      <img [src]="perfilImagem" alt="Foto de Perfil" class="rounded-circle mr-2" style="width: 50px; height: 50px;">
+      <img [src]="perfilImagem" alt="Foto de Perfil" class="rounded-circle mr-2" style="width: 35px; height: 35px;">
     </div>
+
   </div>
 </header>
 

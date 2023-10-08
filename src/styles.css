@@ -1,3 +1,5 @@
+/* Importe os estilos do PrimeIcons */
+@import "~primeicons/primeicons.css";
 
 body {
     background-color: #232226;

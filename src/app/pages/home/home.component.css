@@ -5,7 +5,7 @@
 
 .image-container {
   width: 100%;
-  max-height: 40vh; /* Ajuste a altura máxima como desejado */
+  max-height: 60vh; /* Ajuste a altura máxima como desejado */
   overflow: hidden;
 }
 
