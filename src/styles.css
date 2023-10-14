@@ -1,5 +1,6 @@
 /* Importe os estilos do PrimeIcons */
 @import "~primeicons/primeicons.css";
+@import '~mdb-ui-kit/css/mdb.min.css';
 
 body {
     background-color: #232226;
@@ -24,4 +25,4 @@ body {
     transform: translate(-50%, -50%);
     z-index: 9999; /* Define uma alta camada para garantir que o spinner esteja acima de outros elementos, se houver */
   }
-  
+

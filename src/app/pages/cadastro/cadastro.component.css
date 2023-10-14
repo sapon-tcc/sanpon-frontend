@@ -59,3 +59,59 @@
 .form-outline {
   right: 300px;
 }
+
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+::placeholder {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.form-control:focus::placeholder {
+  color: #495057;
+}
+
+.btn-posicao {
+  background-color: #FE0472; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  text-transform: uppercase; /* Transformar o texto em maiúsculas */
+  font-weight: bold; /* Texto em negrito */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px; /* Espaçamento interno do botão */
+  border: none; /* Remova a borda */
+  border-radius: 10px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+  transition: background-color 0.3s; /* Efeito de transição de cor de fundo */
+
+  /* Estilize o botão quando o cursor estiver sobre ele */
+  &:hover {
+    background-color: #FE0472; /* Cor de fundo alterada quando hover */
+  }
+}
+
+.btn-posicao-gt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remova a borda */
+  border-radius: 10px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+  transition: background-color 0.3s; /* Efeito de transição de cor de fundo */
+
+  /* Estilize o botão quando o cursor estiver sobre ele */
+  &:hover {
+    background-color: #FE0472; /* Cor de fundo alterada quando hover */
+  }
+}

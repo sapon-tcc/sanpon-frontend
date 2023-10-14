@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +11,15 @@ import { BookService } from '../../services/book.service';
 export class LoginComponent implements OnInit{
   gatinhoImagem: string = 'assets/images/cat-login.png';
   books: [] = [];
+  loginForm: FormGroup;
+  submitted = false;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private formBuilder: FormBuilder, private router: Router) {
+    this.loginForm = this.formBuilder.group({
+      usuario: ['', [Validators.required, Validators.email]],
+      senha: ['', [Validators.required, Validators.minLength(6)]]
+    });
+   }
 
   ngOnInit(): void {
     this.bookService.getBooks()
@@ -18,6 +27,19 @@ export class LoginComponent implements OnInit{
         console.log(data);
         this.books = data;
       });
+  }
+
+  login() {
+    this.submitted = true;
+
+    if (this.loginForm.invalid) {
+      return;
+    }
+    const { usuario, senha } = this.loginForm.value;
+    console.log('Tentativa de login:', usuario);
+    setTimeout(() => {
+      this.router.navigate(['/']);
+    }, 3000);
   }
 
 }
