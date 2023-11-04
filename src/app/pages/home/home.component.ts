@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
+import 'bootstrap/dist/js/bootstrap.js';
+
 
 @Component({
   selector: 'app-home',

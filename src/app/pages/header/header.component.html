@@ -16,29 +16,27 @@
 
   <div class="container-fluid d-none d-md-flex justify-content-between align-items-center">
     <div class="flex">
-      <i class="pi pi-home mr-3 " style="color: #ffffff;"></i>
-      <i class="pi pi-globe mr-3 " style="color: #ffffff;"></i>
+      <a href=""><i class="pi pi-home mr-3 p-2" style="color: #ffffff;"></i></a>
     </div>
-    
+
     <div>
       <div class="input-group">
           <!-- Campo de entrada de texto -->
-          <input 
+          <input
             (keyup.enter)="searchBooks()" [(ngModel)]="query"
-            type="text" 
-            class="form-control search-input bg-dark border-0" 
-            placeholder="Pesquisar por livro, gênero e autor." 
+            type="text"
+            class="form-control search-input bg-dark border-0"
+            placeholder="Pesquisar por livro, gênero e autor."
             aria-label="Pesquisar"
             aria-describedby="basic-addon1"
           >
       </div>
     </div>
 
-    
-    <div class="profile-section d-flex align-items-center">
-      <img [src]="perfilImagem" alt="Foto de Perfil" class="rounded-circle mr-2" style="width: 35px; height: 35px;">
-    </div>
 
+    <div class="profile-section d-flex align-items-center">
+      <i class="fa fa-user-circle fa-2x" id="profile-icon" aria-hidden="true" style="color: #b9b9b9;"></i>
+    </div>
   </div>
 </header>
 

@@ -11,6 +11,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     HomeComponent,
     HeaderComponent,
     CadastroComponent,
+    PesquisarComponent,
   ],
   imports: [
     BrowserModule,
