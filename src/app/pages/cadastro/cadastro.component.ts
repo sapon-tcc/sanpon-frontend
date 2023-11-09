@@ -23,16 +23,17 @@ export class CadastroComponent implements OnInit {
 
   myGroup(usuario: Usuario) {
     this.form = this.formBuilder.group({
-      usuario: [usuario.usuario, [Validators.required]],
-      senha: [usuario.senha, [Validators.required]]
+      nm_name: [usuario.nm_name, [Validators.required]],
+      nm_password: [usuario.nm_password, [Validators.required]],
+      nm_email: [usuario.nm_email, [Validators.required]]
     })
   }
 
   salvar() {
     if (this.form.valid) {
-      const { usuario, senha } = this.form.value;
+      const { usuario, senha, email } = this.form.value;
 
-      const registrado = this.usuarioService.registrarUsuario(usuario, senha);
+      const registrado = this.usuarioService.registrarUsuario(usuario, senha, email);
 
       if (registrado) {
         this.form.reset();

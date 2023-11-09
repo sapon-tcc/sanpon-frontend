@@ -8,7 +8,7 @@ export class UsuarioService {
 
   constructor() { }
 
-  registrarUsuario(usuario: string, senha: string): boolean {
+  registrarUsuario(usuario: string, senha: string, email: string): boolean {
     const usuarioExistente = this.usuarios.find(user => user.usuario === usuario);
     if (usuarioExistente) {
       return false;

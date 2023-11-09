@@ -1,4 +1,5 @@
 export class Usuario {
-  usuario: string;
-  senha: string;
+  nm_name: string;
+  nm_password: string;
+  nm_email: string;
 }

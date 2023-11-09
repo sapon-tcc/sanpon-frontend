@@ -11,30 +11,23 @@
         <h2 class="title-form">LOGIN</h2>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
             <div class="form-group mb-3">
-              <label for="usuario">Usuário</label>
-              <input type="email" id="usuario" class="form-control" formControlName="usuario" placeholder="Digite seu usuário"/>
+              <label class="form-label" for="user">Usuário</label>
+              <input type="email" id="user" class="form-control" formControlName="user" placeholder="Digite seu usuário"/>
             </div>
 
             <div class="form-group mb-4">
-              <label for="senha">Senha</label>
-              <input type="password" id="senha" class="form-control" formControlName="senha" placeholder="Digite sua senha"/>
+              <label class="form-label" for="email">E-mail</label>
+              <input type="email" id="email" class="form-control" formControlName="email" placeholder="Digite seu e-mail"/>
+            </div>
+
+            <div class="form-group mb-4">
+              <label class="form-label" for="password">Senha</label>
+              <input type="password" id="password" class="form-control" formControlName="password" placeholder="Digite sua senha"/>
             </div>
 
             <div class="mb-2">
               <button type="submit" class="btn btn-cor d-flex justify-content-center btn-posicao" [disabled]="!loginForm.valid">ENTRAR</button>
             </div>
-
-          <div class="mb-2">
-            <a class="btn text-white d-flex justify-content-center btn-posicao-gt" style="background-color: #55acee" href="#!" role="button">
-              <i class="fab fa-twitter fa-1x me-2"></i>
-            </a>
-          </div>
-
-          <div class="mb-2">
-            <a class="btn text-white d-flex justify-content-center btn-posicao-gt" style="background-color: #dd4b39" href="#!" role="button">
-              <i class="fab fa-google fa-1x me-2"></i>
-            </a>
-          </div>
         </form>
       </div>
     </div>

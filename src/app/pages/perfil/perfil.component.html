@@ -1,0 +1,21 @@
+<div class="container d-flex flex-column align-items-center">
+  <h2 class="title-form p-5">Meu Perfil</h2>
+  <div class="profile-section">
+    <i class="fa fa-user-circle fa-10x" id="profile-icon" aria-hidden="true" style="color: #b9b9b9;"></i>
+  </div>
+  <div>
+    <h2 class="p-3">Informações Pessoais</h2>
+    <p>Nome: {{ nome }}</p>
+    <p>Data de Nascimento: {{ dataNascimento }}</p>
+  </div>
+  <div>
+    <h2>Descrição/Status</h2>
+    <p>{{ descricao }}</p>
+    <button (click)="editarDescricao()">Editar Descrição</button>
+  </div>
+  <div>
+    <h2>Opções de Edição</h2>
+    <button (click)="editarPerfil()">Editar Perfil</button>
+  </div>
+</div>
+

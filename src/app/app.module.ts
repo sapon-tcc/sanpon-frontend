@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
     HeaderComponent,
     CadastroComponent,
     PesquisarComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

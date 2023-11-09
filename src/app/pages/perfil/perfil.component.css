@@ -1,0 +1,10 @@
+.title-form {
+  color: rgb(194, 192, 192);
+  text-shadow: 1px 1px 40px #5000CA, 3px 3px 40px #5000CA,
+    3px 3px 40px #5000CA, 3px 3px 40px #5000CA;
+    font-size: 30px;
+}
+
+.title-user {
+  color: aliceblue;
+}

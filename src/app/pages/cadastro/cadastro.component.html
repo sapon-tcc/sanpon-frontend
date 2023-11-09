@@ -9,29 +9,22 @@
         <h2 class="title-form">CADASTRO</h2>
         <form [formGroup]="form" (ngSubmit)="salvar()">
           <div class="form-group mb-3">
-            <label class="form-label" for="usuario">Usuário</label>
-            <input type="text" id="usuario" class="form-control" formControlName="usuario" placeholder="Novo usuário"/>
+            <label class="form-label" for="user">Usuário</label>
+            <input type="text" id="user" class="form-control" formControlName="user" placeholder="Novo usuário"/>
           </div>
 
           <div class="form-group mb-4">
-            <label class="form-label" for="senha">Senha</label>
-            <input type="password" id="senha" class="form-control" formControlName="senha" placeholder="Digite uma senha"/>
+            <label class="form-label" for="email">E-mail</label>
+            <input type="email" id="email" class="form-control" formControlName="email" placeholder="Digite um e-mail"/>
+          </div>
+
+          <div class="form-group mb-4">
+            <label class="form-label" for="password">Senha</label>
+            <input type="password" id="password" class="form-control" formControlName="password" placeholder="Digite uma senha"/>
           </div>
 
           <div class="mb-2">
             <button type="submit" class="btn btn-cor d-flex justify-content-center btn-posicao" [disabled]="!form.valid">ENTRAR</button>
-          </div>
-
-          <div class="mb-2">
-            <a class="btn text-white d-flex justify-content-center btn-posicao-gt" style="background-color: #55acee" href="#!" role="button">
-              <i class="fab fa-twitter fa-1x me-2"></i>
-            </a>
-          </div>
-
-          <div class="mb-2">
-            <a class="btn text-white d-flex justify-content-center btn-posicao-gt" style="background-color: #dd4b39" href="#!" role="button">
-              <i class="fab fa-google fa-1x me-2"></i>
-            </a>
           </div>
           <div>
             Você já é cadastrado?
