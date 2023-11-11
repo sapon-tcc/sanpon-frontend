@@ -42,3 +42,24 @@
   font-weight: bold;
   color: white;
 }
+
+
+/* styles.css ou app.component.css */
+.swiper-container {
+  width: 80%; /* Ajuste conforme necessário */
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  outline: none; /* Remove a borda ao focar no slide */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.swiper-pagination {
+  bottom: 10px;
+}

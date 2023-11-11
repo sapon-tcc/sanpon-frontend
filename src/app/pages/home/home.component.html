@@ -1,6 +1,7 @@
 
 <!-- Desktop view -->
-<div class="d-none d-md-block">
+<div class="d-none d-md-block mb-10">
+  
   <div class="image-container d-none d-md-block">
     <img src="assets/images/img1.png" alt="Imagem" class="img-fluid">
     <div class="text-overlay ">
@@ -10,83 +11,75 @@
     </div>
   </div>
 
+  <div class="mt-10 ml-5">
 
-  <div class="container-fluid mt-5">
-    <h2 class="text-white font-weight-bold d-flex"># Sugestões</h2>
-    <div class="carousel slide" id="bookCarousel" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item" *ngFor="let book of books; let i = index" [class.active]="i === 0">
-          <img *ngIf="book.volumeInfo.imageLinks.thumbnail" [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="d-block w-100">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    <h2 class="text-white font-weight-bold text-2xl mb-5"># Sugestões</h2>
+
+    <swiper
+        [slidesPerView]="8"
+        [spaceBetween]="4"
+        [navigation]="true"
+        [pagination]="{ clickable: true }"
+        
+      >
+        
+          <ng-template swiperSlide *ngFor="let book of books; let i = index" >
+            <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
+              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+            </div>
+          </ng-template>
+  
+        
+    </swiper>
+
   </div>
 
+  <div class="mt-10 ml-5">
 
-  <div class="container-fluid mt-5">
-    <h2 class="text-white font-weight-bold d-flex"># Ação</h2>
-    <div class="carousel slide" id="bookCarousel" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item" *ngFor="let book of books; let i = index" [class.active]="i === 0">
-          <img *ngIf="book.volumeInfo.imageLinks.thumbnail" [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="d-block w-100">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    <h2 class="text-white font-weight-bold text-2xl mb-5"># Ação</h2>
+
+    <swiper
+        [slidesPerView]="8"
+        [spaceBetween]="4"
+        [navigation]="true"
+        [pagination]="{ clickable: true }"
+        
+      >
+        
+          <ng-template swiperSlide *ngFor="let book of books; let i = index" >
+            <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
+              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+            </div>
+          </ng-template>
+  
+        
+    </swiper>
+
   </div>
 
-  <div class="container-fluid mt-5">
-    <h2 class="text-white font-weight-bold d-flex"># Clássicos</h2>
-    <div class="carousel slide" id="bookCarousel" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item" *ngFor="let book of books; let i = index" [class.active]="i === 0">
-          <img *ngIf="book.volumeInfo.imageLinks.thumbnail" [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="d-block w-100">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+  <div class="mt-10 ml-5">
+
+    <h2 class="text-white font-weight-bold text-2xl mb-5"># Clássicos</h2>
+
+    <swiper
+        [slidesPerView]="8"
+        [spaceBetween]="4"
+        [navigation]="true"
+        [pagination]="{ clickable: true }"
+        
+      >
+        
+          <ng-template swiperSlide *ngFor="let book of books; let i = index" >
+            <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
+              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+            </div>
+          </ng-template>
+  
+        
+    </swiper>
+
   </div>
 
-  <div class="container-fluid mt-5">
-    <h2 class="text-white font-weight-bold d-flex"># Científicos</h2>
-    <div class="carousel slide" id="bookCarousel" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item" *ngFor="let book of books; let i = index" [class.active]="i === 0">
-          <img *ngIf="book.volumeInfo.imageLinks.thumbnail" [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="d-block w-100">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
 </div>
 
 <!-- Mobile view -->

@@ -1,6 +1,28 @@
-/* Importe os estilos do PrimeIcons */
-@import "~primeicons/primeicons.css";
-@import '~mdb-ui-kit/css/mdb.min.css';
+/* No arquivo styles.css ou estilos globais do Angular */
+
+@import 'swiper/css/bundle';
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* No arquivo styles.css ou estilos globais do Angular */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Cor da barra de rolagem móvel (thumb) */
+    border-radius: 10px; /* Bordas arredondadas da barra de rolagem móvel */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Cor da trilha da barra de rolagem */
+  }
+  
 
 body {
     background-color: #232226;
@@ -24,5 +46,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999; /* Define uma alta camada para garantir que o spinner esteja acima de outros elementos, se houver */
-  }
+}
+
+
+
+.block-shadow {
+  box-shadow: 0.5px 0.5px 10px #88ff0050, 0.5px 0.5px 10px #88ff0050,
+    0.5px 0.5px 10px #88ff0050, 0.5px 0.5px 10px #88ff0050;
+}
+
 

@@ -13,6 +13,8 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { SwiperModule } from 'swiper/angular';
+
 
 
 @NgModule({
@@ -31,15 +33,16 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    SwiperModule
   ],
-  providers: [
-      {
-      provide: HTTP_INTERCEPTORS,
-      useClass: LoadingInterceptor,
-      multi: true
-    }
-  ],
+  // providers: [
+  //     {
+  //       provide: HTTP_INTERCEPTORS,
+  //       useClass: LoadingInterceptor,
+  //       multi: true
+  //     }
+  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
