@@ -1,0 +1,10 @@
+
+<div class="grid grid-cols-4 gap-4 text-white container mt-10  justify-items-center justify-center align-middle">
+
+    <div swiperSlide *ngFor="let book of searchResults; let i = index" class="col-span-1 mt-5" >
+        <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
+          <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 w-40 block-shadow">
+        </div>
+    </div>
+
+</div>

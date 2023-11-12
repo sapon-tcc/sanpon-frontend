@@ -11,13 +11,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
-import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SwiperModule } from 'swiper/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingService } from './services/loading.service';
 import { LoadingComponent } from './pages/loading/loading.component';
+import { SearchBarComponent } from './pages/search/search.component';
+import { SearchResultsComponent } from './pages/search-results/search-results.component';
 
 
 
@@ -29,9 +30,10 @@ import { LoadingComponent } from './pages/loading/loading.component';
     HomeComponent,
     HeaderComponent,
     CadastroComponent,
-    PesquisarComponent,
     PerfilComponent,
     LoadingComponent,
+    SearchBarComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,

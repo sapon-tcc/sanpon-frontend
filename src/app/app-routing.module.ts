@@ -4,12 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { SearchBarComponent } from './pages/search/search.component';
+import { SearchResultsComponent } from './pages/search-results/search-results.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
-  {path: 'perfil', component: PerfilComponent}
+  {path: 'perfil', component: PerfilComponent},
+  { path: 'search-results', component: SearchResultsComponent },
+  { path: 'search', component: SearchBarComponent },
+  { path: '', redirectTo: '/search', pathMatch: 'full' },
 ];
 
 @NgModule({

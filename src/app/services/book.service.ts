@@ -18,7 +18,7 @@ export class BookService {
     return this.http.get<Book>(`${this.apiBookSeggestion}`)
   }
 
-  searchBooks(query: string, subject?: string): Observable<any> {
+  searchBooks(query: string, subject = ''): Observable<any> {
     return this.http.get<Book>(`${this.apiBook}?q=${query}&s=${subject}`)
   }
 }
