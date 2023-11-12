@@ -14,6 +14,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SwiperModule } from 'swiper/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -34,7 +36,9 @@ import { SwiperModule } from 'swiper/angular';
     FormsModule,
     ReactiveFormsModule,
     ProgressSpinnerModule,
-    SwiperModule
+    SwiperModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   // providers: [
   //     {

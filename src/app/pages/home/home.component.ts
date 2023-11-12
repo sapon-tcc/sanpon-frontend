@@ -5,6 +5,8 @@ import 'bootstrap/dist/js/bootstrap.js';
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 
+import { ToastrService } from 'ngx-toastr';
+
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
 
@@ -22,23 +24,54 @@ export class HomeComponent implements OnInit {
   foto5: string = 'assets/images/pexels-tim-samuel-5838911 1.png';
   gatinhoIcone: string = 'assets/images/cat-icon.png';
   books: [] = [];
+  actionBooks: [] = [];
+  classicBooks: [] = [];
   currentIndex = 0;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getSuggestions();
+    this.getActionBooks();
+    this.getClassicBooks();
   }
 
   getSuggestions(): void {
     this.bookService.getSuggestions().subscribe({
       next: (data) => {
-        console.log(data);
         this.books = data;
-        // Outras ações que você deseja realizar após obter os livros
+        this.toastr.success('Livros carregados com sucesso!', 'Sucesso');
+        console.log("Passou aqui")
       },
       error: (error) => {
         console.error('Erro ao obter livros:', error);
+        this.toastr.error('Falha ao carregar livros!', 'Erro');
+      },
+    });
+  }
+
+  getActionBooks(): void {
+    this.bookService.searchBooks("action", "action").subscribe({
+      next: (data) => {
+        this.actionBooks = data;
+        this.toastr.success('Livros carregados com sucesso!', 'Sucesso');
+      },
+      error: (error) => {
+        console.error('Erro ao obter livros:', error);
+        this.toastr.error('Falha ao carregar livros!', 'Erro');
+      },
+    });
+  }
+
+  getClassicBooks(): void {
+    this.bookService.searchBooks("classic", "classic").subscribe({
+      next: (data) => {
+        this.classicBooks = data;
+        this.toastr.success('Livros carregados com sucesso!', 'Sucesso');
+      },
+      error: (error) => {
+        console.error('Erro ao obter livros:', error);
+        this.toastr.error('Falha ao carregar livros!', 'Erro');
       },
     });
   }

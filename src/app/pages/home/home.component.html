@@ -7,8 +7,8 @@
     <img src="assets/images/img1.png" alt="Imagem" class="img-fluid">
     <div class="text-overlay ">
       <img [src]="gatinhoIcone" class="imagem-icone">
-      <h1 class="text-sanpon font-weight-bold">Sanpon</h1>
-      <h2 class="text-icon">Melhor plataforma de avaliação de livros.</h2>
+      <h1 class="ml-5 text-6xl text-white font-bold">Sanpon</h1>
+      <h2 class="ml-5 text-3xl text-white font-semibold">Melhor plataforma de avaliação de livros.</h2>
     </div>
   </div>
 
@@ -38,7 +38,7 @@
       </div>
   </div>
 
-  <!-- LISTAGEM POR GENERO -->
+  <!-- LISTAGEM DE SUGESTÕES -->
   <div class="mt-10 ml-5">
 
     <h2 class="text-white font-weight-bold text-6xl mb-5"># Sugestões</h2>
@@ -101,7 +101,7 @@
         
       >
         
-          <ng-template swiperSlide *ngFor="let book of books; let i = index" >
+          <ng-template swiperSlide *ngFor="let book of actionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
@@ -151,7 +151,7 @@
         
       >
         
-          <ng-template swiperSlide *ngFor="let book of books; let i = index" >
+          <ng-template swiperSlide *ngFor="let book of classicBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
