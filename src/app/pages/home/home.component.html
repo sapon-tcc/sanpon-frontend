@@ -1,7 +1,7 @@
 
 <!-- Desktop view -->
 <div class="d-none d-md-block mb-10">
-  
+
   <!-- CAPA -->
   <div class="image-container d-none d-md-block">
     <img src="assets/images/img1.png" alt="Imagem" class="img-fluid">
@@ -14,29 +14,26 @@
 
   <!-- BLOCO DE NOVIDADES -->
   <div class="ml-5 mt-10 mr-5">
-
-      <h2 class="text-white font-weight-bold text-6xl mb-5"># Novidades</h2>
-
-      <div class="grid grid-cols-12 gap-4 text-white">
-    
+    <h2 class="text-white font-weight-bold text-6xl mb-5"># Novidades</h2>
+    <div class="grid grid-cols-12 gap-4 text-white">
         <div class="col-span-8 row-span-2 block-shadow-purple">
-          <img [src]="foto1" class="h-full w-full rounded-lg" >
+            <img [src]="foto1" class="h-full w-full rounded-lg" >
         </div>
         <div class="col-span-2 block-shadow-purple">
-          <img [src]="foto2" class="h-full w-full rounded-lg">
+            <img [src]="foto2" class="h-full w-100 rounded-lg">
         </div>
         <div class="col-span-2 block-shadow-purple">
-          <img [src]="foto3" class="h-full w-full rounded-lg">
+            <img [src]="foto3" class="h-full w-100 rounded-lg">
         </div>
         <div class="col-span-2 block-shadow-purple">
-          <img [src]="foto4" class="h-full w-full rounded-lg">
+            <img [src]="foto4" class="h-full w-100 rounded-lg">
         </div>
         <div class="col-span-2 block-shadow-purple">
-          <img [src]="foto5" class="h-full w-full rounded-lg">
+            <img [src]="foto5" class="h-full w-100 rounded-lg">
         </div>
-    
-      </div>
-  </div>
+    </div>
+</div>
+
 
   <!-- LISTAGEM DE SUGESTÕES -->
   <div class="mt-10 ml-5">
@@ -48,45 +45,41 @@
         [spaceBetween]="4"
         [navigation]="true"
         [pagination]="{ clickable: true }"
-        
+
       >
-        
+
           <ng-template swiperSlide *ngFor="let book of books; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
-  
-        
+
+
     </swiper>
 
   </div>
 
   <!-- BLOCO DE NOVIDADES -->
   <div class="ml-5 mt-10 mr-5">
-
     <h2 class="text-white font-weight-bold text-6xl mb-5"># Novidades</h2>
-
     <div class="grid grid-cols-12 gap-4 text-white">
-  
-      <div class="col-span-8 row-span-2 block-shadow-purple">
-        <img [src]="foto1" class="h-full w-full rounded-lg" >
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto2" class="h-full w-full rounded-lg">
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto3" class="h-full w-full rounded-lg">
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto4" class="h-full w-full rounded-lg">
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto5" class="h-full w-full rounded-lg">
-      </div>
-  
+        <div class="col-span-8 row-span-2 block-shadow-purple">
+            <img [src]="foto1" class="h-full w-full rounded-lg" >
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto2" class="h-full w-100 rounded-lg">
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto3" class="h-full w-100 rounded-lg">
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto4" class="h-full w-100 rounded-lg">
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto5" class="h-full w-100 rounded-lg">
+        </div>
     </div>
-  </div>
+</div>
 
   <!-- LISTAGEM POR GENERO -->
   <div class="mt-10 ml-5">
@@ -98,45 +91,41 @@
         [spaceBetween]="4"
         [navigation]="true"
         [pagination]="{ clickable: true }"
-        
+
       >
-        
+
           <ng-template swiperSlide *ngFor="let book of actionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
-  
-        
+
+
     </swiper>
 
   </div>
 
   <!-- BLOCO DE NOVIDADES -->
   <div class="ml-5 mt-10 mr-5">
-
     <h2 class="text-white font-weight-bold text-6xl mb-5"># Novidades</h2>
-
     <div class="grid grid-cols-12 gap-4 text-white">
-  
-      <div class="col-span-8 row-span-2 block-shadow-purple">
-        <img [src]="foto1" class="h-full w-full rounded-lg" >
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto2" class="h-full w-full rounded-lg">
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto3" class="h-full w-full rounded-lg">
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto4" class="h-full w-full rounded-lg">
-      </div>
-      <div class="col-span-2 block-shadow-purple">
-        <img [src]="foto5" class="h-full w-full rounded-lg">
-      </div>
-  
+        <div class="col-span-8 row-span-2 block-shadow-purple">
+            <img [src]="foto1" class="h-full w-full rounded-lg" >
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto2" class="h-full w-100 rounded-lg">
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto3" class="h-full w-100 rounded-lg">
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto4" class="h-full w-100 rounded-lg">
+        </div>
+        <div class="col-span-2 block-shadow-purple">
+            <img [src]="foto5" class="h-full w-100 rounded-lg">
+        </div>
     </div>
-  </div>
+</div>
 
   <!-- LISTAGEM POR GENERO -->
   <div class="mt-10 ml-5">
@@ -148,16 +137,16 @@
         [spaceBetween]="4"
         [navigation]="true"
         [pagination]="{ clickable: true }"
-        
+
       >
-        
+
           <ng-template swiperSlide *ngFor="let book of classicBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
-  
-        
+
+
     </swiper>
 
   </div>
@@ -183,7 +172,7 @@
     <h2 class="text-white font-weight-bold text-6xl mb-5"># Novidades</h2>
 
     <div class="grid grid-cols-1 gap-4 text-white">
-  
+
       <div class="col-span-1 row-span-2 block-shadow-purple">
         <img [src]="foto1" class="h-full w-full rounded-lg" >
       </div>
@@ -199,7 +188,7 @@
       <div class="col-span-1 block-shadow-purple">
         <img [src]="foto5" class="h-full w-full rounded-lg">
       </div>
-  
+
     </div>
   </div> -->
 
@@ -213,16 +202,16 @@
         [spaceBetween]="4"
         [navigation]="false"
         [pagination]="{ clickable: false }"
-        
+
       >
-        
+
           <ng-template swiperSlide *ngFor="let book of books; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
 
-        
+
     </swiper>
 
   </div>
@@ -263,16 +252,16 @@
         [spaceBetween]="4"
         [navigation]="false"
         [pagination]="{ clickable: false }"
-        
+
       >
-        
+
           <ng-template swiperSlide *ngFor="let book of actionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
 
-        
+
     </swiper>
 
   </div>
@@ -313,16 +302,16 @@
         [spaceBetween]="4"
         [navigation]="false"
         [pagination]="{ clickable: false }"
-        
+
       >
-        
+
           <ng-template swiperSlide *ngFor="let book of classicBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
 
-        
+
     </swiper>
 
   </div>
