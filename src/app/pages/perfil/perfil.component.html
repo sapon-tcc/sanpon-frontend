@@ -1,21 +1,71 @@
 <div class="container d-flex flex-column align-items-center">
-  <h2 class="title-form p-5">Meu Perfil</h2>
   <div class="profile-section">
-    <i class="fa fa-user-circle fa-10x" id="profile-icon" aria-hidden="true" style="color: #b9b9b9;"></i>
+    <img [src]="imagemPerfil" class="img-fluid p-5" />
   </div>
   <div>
-    <h2 class="p-3">Informações Pessoais</h2>
-    <p>Nome: {{ nome }}</p>
-    <p>Data de Nascimento: {{ dataNascimento }}</p>
-  </div>
-  <div>
-    <h2>Descrição/Status</h2>
-    <p>{{ descricao }}</p>
-    <button (click)="editarDescricao()">Editar Descrição</button>
-  </div>
-  <div>
-    <h2>Opções de Edição</h2>
-    <button (click)="editarPerfil()">Editar Perfil</button>
+    <p class="h2 p-3 titulo-perfil display-6 d-flex align-items-center justify-content-center">Informações Pessoais</p>
+
+    <hr class="hr hr-blurry" />
+
+    <div class="profile-container p-3 d-flex flex-column">
+      <button class="ml-auto p-2" (click)="abrirModal()">
+        <i class="far fa-pen-to-square fa-2x"></i>
+      </button>
+
+      <p class="profile-label pt-2">Nome:</p>
+      <p class="profile-value  p-3">{{ nome }}</p>
+
+      <p class="profile-label pt-2">Aniversário:</p>
+      <p class="profile-value  p-3">{{ dataNascimento }}</p>
+
+      <p class="profile-label pt-2">Descrição:</p>
+      <p class="profile-value p-5">{{ descricao }}</p>
+    </div>
+
+    <div>
+
+      <!-- Modal -->
+      <div class="modal" [class.d-block]="modalAberta" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar Perfil</h5>
+              <button
+                type="button"
+                class="btn-close"
+                (click)="fecharModal()"
+                aria-label="Close"
+              ><i class="far fa-circle-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+              <label for="novoNome">Nome:</label>
+              <input type="text" id="novoNome" [(ngModel)]="novoNome" placeholder="Novo nome"/>
+
+              <label for="novaDataNascimento">Aniversário:</label>
+              <input type="date" id="novaDataNascimento" [(ngModel)]="novaDataNascimento" placeholder="XX/XX/XXXX"/>
+
+              <label for="novaDescricao">Descrição:</label>
+              <input type="text" id="novaDescricao" [(ngModel)]="novaDescricao" placeholder="Nova descrição"/>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                (click)="fecharModal()"
+              >
+                Fechar
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="salvarAlteracoes()"
+              >
+                Salvar Alterações
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-

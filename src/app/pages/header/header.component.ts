@@ -7,7 +7,7 @@ import { BookService } from '../../services/book.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  perfilImagem: string = 'assets/images/perfil-sanpon.png';
+  imagemPerfil: string = 'assets/images/perfil-sanpon.jpg';
   query: string = '';
 
   constructor(private bookService: BookService) { }

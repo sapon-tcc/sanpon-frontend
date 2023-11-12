@@ -5,14 +5,13 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit{
   gatinhoImagem: string = 'assets/images/cat-login.png';
   books: [] = [];
-  loginForm: FormGroup;
   submitted = false;
+  loginForm: FormGroup;
 
   constructor(private bookService: BookService, private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({

@@ -42,7 +42,8 @@ import { LoadingComponent } from './pages/loading/loading.component';
     ProgressSpinnerModule,
     SwiperModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+
   ],
   providers: [
       {
