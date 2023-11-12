@@ -1,0 +1,11 @@
+<div class="input-group">
+    <input 
+      [(ngModel)]="searchQuery"     
+      (keyup.enter)="search()"
+      type="text"
+      class="form-control search-input bg-dark border-0"
+      placeholder="Pesquisar por livro, gênero e autor."
+      aria-label="Pesquisar"
+      aria-describedby="basic-addon1"
+    />
+</div>
