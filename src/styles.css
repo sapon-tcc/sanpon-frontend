@@ -11,17 +11,17 @@
 
 /* No arquivo styles.css ou estilos globais do Angular */
 ::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
-  }
+    width: 5px; /* Largura da barra de rolagem */
+}
   
-  ::-webkit-scrollbar-thumb {
-    background-color: #3498db; /* Cor da barra de rolagem móvel (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #88ff00ab; /* Cor da barra de rolagem móvel (thumb) */
     border-radius: 10px; /* Bordas arredondadas da barra de rolagem móvel */
-  }
+}
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: #f5f5f5; /* Cor da trilha da barra de rolagem */
-  }
+}
   
 
 body {
@@ -51,8 +51,13 @@ body {
 
 
 .block-shadow {
-  box-shadow: 0.5px 0.5px 10px #88ff0050, 0.5px 0.5px 10px #88ff0050,
-    0.5px 0.5px 10px #88ff0050, 0.5px 0.5px 10px #88ff0050;
+  box-shadow: 0.5px 0.5px 10px #88ff0026, 0.5px 0.5px 10px #88ff0026,
+    0.5px 0.5px 10px #88ff0026, 0.5px 0.5px 10px #88ff0026;
+}
+
+.block-shadow-purple {
+  box-shadow: 0.5px 0.5px 10px #e100ff1b, 0.5px 0.5px 10px #e100ff1b,
+    0.5px 0.5px 10px #e100ff1b, 0.5px 0.5px 10px #e100ff1b;
 }
 
 
