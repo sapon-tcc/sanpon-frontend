@@ -16,6 +16,9 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SwiperModule } from 'swiper/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { LoadingService } from './services/loading.service';
+import { LoadingComponent } from './pages/loading/loading.component';
+
 
 
 
@@ -28,6 +31,7 @@ import { ToastrModule } from 'ngx-toastr';
     CadastroComponent,
     PesquisarComponent,
     PerfilComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,13 +44,15 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  // providers: [
-  //     {
-  //       provide: HTTP_INTERCEPTORS,
-  //       useClass: LoadingInterceptor,
-  //       multi: true
-  //     }
-  // ],
+  providers: [
+      {
+        provide: HTTP_INTERCEPTORS,
+        useClass: LoadingInterceptor,
+        multi: true
+      },
+      LoadingService,
+  ],
+  exports: [LoadingComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
