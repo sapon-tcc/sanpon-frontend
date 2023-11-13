@@ -84,7 +84,7 @@
   <!-- LISTAGEM POR GENERO -->
   <div class="mt-10 ml-5">
 
-    <h2 class="text-white font-weight-bold text-6xl mb-5"># Ação</h2>
+    <h2 class="text-white font-weight-bold text-6xl mb-5"># Ficção</h2>
 
     <swiper
         [slidesPerView]="8"
@@ -93,8 +93,8 @@
         [pagination]="{ clickable: true }"
 
       >
-
-          <ng-template swiperSlide *ngFor="let book of actionBooks; let i = index" >
+        
+          <ng-template swiperSlide *ngFor="let book of fictionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
@@ -245,7 +245,7 @@
   <!-- LISTAGEM POR GENERO -->
   <div class="mt-10 ml-2">
 
-    <h2 class="text-white font-weight-bold text-3xl mb-2"># Ação</h2>
+    <h2 class="text-white font-weight-bold text-3xl mb-2"># Ficção</h2>
 
     <swiper
         [slidesPerView]="2"
@@ -254,8 +254,8 @@
         [pagination]="{ clickable: false }"
 
       >
-
-          <ng-template swiperSlide *ngFor="let book of actionBooks; let i = index" >
+        
+          <ng-template swiperSlide *ngFor="let book of fictionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
               <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>

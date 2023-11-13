@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   foto5: string = 'assets/images/pexels-tim-samuel-5838911 1.png';
   gatinhoIcone: string = 'assets/images/cat-icon.png';
   books: [] = [];
-  actionBooks: [] = [];
+  fictionBooks: [] = [];
   classicBooks: [] = [];
   currentIndex = 0;
 
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSuggestions();
-    this.getActionBooks();
+    this.getFictionBooks();
     this.getClassicBooks();
   }
 
@@ -50,10 +50,10 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  getActionBooks(): void {
-    this.bookService.searchBooks("action", "action").subscribe({
+  getFictionBooks(): void {
+    this.bookService.searchBooks("", "Fiction").subscribe({
       next: (data) => {
-        this.actionBooks = data;
+        this.fictionBooks = data;
         this.toastr.success('Livros carregados com sucesso!', 'Sucesso');
       },
       error: (error) => {
