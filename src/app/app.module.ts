@@ -19,6 +19,7 @@ import { LoadingService } from './services/loading.service';
 import { LoadingComponent } from './pages/loading/loading.component';
 import { SearchBarComponent } from './pages/search/search.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
+import { LivroComponent } from './pages/livro/livro.component';
 
 
 
@@ -34,6 +35,7 @@ import { SearchResultsComponent } from './pages/search-results/search-results.co
     LoadingComponent,
     SearchBarComponent,
     SearchResultsComponent,
+    LivroComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ export class BookService {
   private apiBook = 'https://sanpon.onrender.com/api/v1/books';
   private apiBookSeggestion = 'https://sanpon.onrender.com/api/v1/suggestion';
   private apiBookDetail = 'https://sanpon.onrender.com/api/v1/books';
+  private apiBookOpinions = 'https://sanpon.onrender.com/api/v1/books/opinion';
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +27,9 @@ export class BookService {
 
   getDetalhesLivro(livroId: string): Observable<any> {
     return this.http.get<Book>(`${this.apiBookDetail}/${livroId}`)
+  }
+
+  getOpinion(livroId: string): Observable<any> {
+    return this.http.get<Book>(`${this.apiBookOpinions}/${livroId}`)
   }
 }
