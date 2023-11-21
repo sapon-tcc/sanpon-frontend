@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
+
+  constructor(private authService: AuthService, private router: Router) {}
+
   nome = '';
   dataNascimento = '';
   descricao = '';
@@ -17,12 +22,11 @@ export class PerfilComponent {
   novaDataNascimento: string = '';
   novaDescricao: string = '';
 
-  // editarDescricao() {
-  //   const novaDescricao = prompt('Digite uma nova descrição:');
-  //   if (novaDescricao !== null) {
-  //     this.descricao = novaDescricao;
-  //   }
-  // }
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
 
   abrirModal() {
     // Abrir a modal e inicializar os campos com os valores atuais

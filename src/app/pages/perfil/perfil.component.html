@@ -2,8 +2,9 @@
   <div class="profile-section">
     <img [src]="imagemPerfil" class="img-fluid p-5" />
   </div>
-  <div>
+  <div class="text-center">
     <p class="h2 p-3 titulo-perfil display-6 d-flex align-items-center justify-content-center">Informações Pessoais</p>
+    <button class="bg-white pr-4 pl-4 pt-2 pb-2 rounded mb-2" (click)="logout()">Sair</button>
 
     <hr class="hr hr-blurry" />
 
@@ -22,6 +23,7 @@
       <p class="profile-value p-5">{{ descricao }}</p>
     </div>
 
+    
     <div>
 
       <!-- Modal -->
@@ -67,5 +69,7 @@
         </div>
       </div>
     </div>
+
+
   </div>
 </div>

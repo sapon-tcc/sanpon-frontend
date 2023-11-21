@@ -10,17 +10,17 @@
         <form [formGroup]="form" (ngSubmit)="salvar()">
           <div class="form-group mb-3">
             <label class="form-label" for="user">Usuário</label>
-            <input type="text" id="user" class="form-control" formControlName="user" placeholder="Novo usuário"/>
+            <input type="text" id="nm_name" class="form-control" formControlName="nm_name" placeholder="Novo usuário"/>
           </div>
 
           <div class="form-group mb-4">
             <label class="form-label" for="email">E-mail</label>
-            <input type="email" id="email" class="form-control" formControlName="email" placeholder="Digite um e-mail"/>
+            <input type="email" id="nm_email" class="form-control" formControlName="nm_email" placeholder="Digite um e-mail"/>
           </div>
 
           <div class="form-group mb-4">
             <label class="form-label" for="password">Senha</label>
-            <input type="password" id="password" class="form-control" formControlName="password" placeholder="Digite uma senha"/>
+            <input type="password" id="nm_password" class="form-control" formControlName="nm_password" placeholder="Digite uma senha"/>
           </div>
 
           <div class="mb-2">

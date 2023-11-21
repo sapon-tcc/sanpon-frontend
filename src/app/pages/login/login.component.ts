@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BookService } from '../../services/book.service';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -13,21 +14,19 @@ export class LoginComponent implements OnInit{
   submitted = false;
   loginForm: FormGroup;
 
-  constructor(private bookService: BookService, private formBuilder: FormBuilder, private router: Router) {
+  constructor(
+    private authService: AuthService,
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService,
+    private router: Router
+    ) {
     this.loginForm = this.formBuilder.group({
-      nm_nome: ['', [Validators.required, Validators.email]],
-      nm_email: ['', [Validators.required, Validators.email]],
-      nm_senha: ['', [Validators.required, Validators.minLength(6)]]
+      username: [''],
+      password: ['']
     });
    }
 
-  ngOnInit(): void {
-    // this.bookService.getBooks()
-    //   .subscribe(data => {
-    //     console.log(data);
-    //     this.books = data;
-    //   });
-  }
+  ngOnInit(): void {}
 
   login() {
     this.submitted = true;
@@ -35,12 +34,21 @@ export class LoginComponent implements OnInit{
     if (this.loginForm.invalid) {
       return;
     }
-    const { usuario, senha } = this.loginForm.value;
-    console.log('Tentativa de login:', usuario);
-    setTimeout(() => {
-      this.router.navigate(['/']);
-    }, 3000);
+    const { username, password } = this.loginForm.value;
+    const credentials = {username: username, password: password}
+    console.log('Tentativa de login:', username);
+    
+    this.authService.login(credentials).subscribe(
+      (response) => {
+        this.authService.saveToken(response.access_token);
+        this.router.navigate(['/']); // Navegue para a página desejada após o login
+        this.toastr.success('Login realizado com sucesso', 'Sucesso');
+      },
+      (error) => {
+        console.error('Erro no login', error);
+        this.toastr.error(error.error.detail, 'Erro');
+      }
+    )
   }
-
 }
 

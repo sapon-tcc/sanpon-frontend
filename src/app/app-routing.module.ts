@@ -6,12 +6,13 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SearchBarComponent } from './pages/search/search.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cadastro', component: CadastroComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]},
   { path: 'search-results', component: SearchResultsComponent },
   { path: 'search', component: SearchBarComponent },
   { path: '', redirectTo: '/search', pathMatch: 'full' },
