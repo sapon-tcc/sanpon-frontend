@@ -3,7 +3,9 @@
 
     <div swiperSlide *ngFor="let book of searchResults; let i = index" class="col-span-1 mt-5" >
         <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
-          <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 w-40 block-shadow">
+          <a [routerLink]="['/livro', book._id]">
+            <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 w-40 block-shadow">
+          </a>
         </div>
     </div>
 

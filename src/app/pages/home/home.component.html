@@ -50,7 +50,9 @@
 
           <ng-template swiperSlide *ngFor="let book of books; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
-              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+              <a [routerLink]="['/livro', book._id]">
+                <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+              </a>
             </div>
           </ng-template>
 
@@ -96,7 +98,9 @@
         
           <ng-template swiperSlide *ngFor="let book of fictionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
-              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+              <a [routerLink]="['/livro', book._id]">
+                <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+              </a>
             </div>
           </ng-template>
 
@@ -142,7 +146,9 @@
 
           <ng-template swiperSlide *ngFor="let book of classicBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
-              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+              <a [routerLink]="['/livro', book._id]">
+                <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+              </a>
             </div>
           </ng-template>
 
@@ -206,8 +212,11 @@
       >
 
           <ng-template swiperSlide *ngFor="let book of books; let i = index" >
-            <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
-              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+            <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="text-white">
+              <a [routerLink]="['/livro', i]">
+                <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+                AAAAA
+              </a>
             </div>
           </ng-template>
 
@@ -257,7 +266,7 @@
         
           <ng-template swiperSlide *ngFor="let book of fictionBooks; let i = index" >
             <div *ngIf="book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail" class="">
-              <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
+                <img [src]="book.volumeInfo.imageLinks.thumbnail" alt="Capa do Livro" class="h-56 block-shadow">
             </div>
           </ng-template>
 

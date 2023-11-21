@@ -1,0 +1,26 @@
+<!-- detalhes-livro.component.html -->
+
+<!-- CAPA -->
+<div class="image-container d-none d-md-block">
+    <img src="assets/images/img1.png" alt="Imagem" class="img-fluid">
+</div>
+
+
+<div class="container-fluid flex p-5">
+    <img 
+        [src]="detalhesLivro?.volumeInfo.imageLinks.thumbnail" 
+        alt="Capa do Livro" 
+        class="mr-5 h-96"
+    >
+    <div class="flex flex-col">
+        <h1 class="text-white font-extrabold text-3xl">{{ detalhesLivro?.volumeInfo.title }}</h1>
+        <h2 class="text-white font-normal text-2xl mt-2">Autores (as) : {{ detalhesLivro?.volumeInfo.authors }}</h2>
+        <p class="text-white font-normal text-xl mt-2">
+            {{ detalhesLivro?.volumeInfo.description }}
+        </p>
+    </div>
+</div>
+
+
+
+  
