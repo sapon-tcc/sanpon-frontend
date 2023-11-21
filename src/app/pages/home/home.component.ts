@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
   }
 
   getClassicBooks(): void {
-    this.bookService.searchBooks("", "Romance").subscribe({
+    this.bookService.searchBooks("", "Brasil").subscribe({
       next: (data) => {
         this.classicBooks = data;
         this.toastr.success('Livros carregados com sucesso!', 'Sucesso');
