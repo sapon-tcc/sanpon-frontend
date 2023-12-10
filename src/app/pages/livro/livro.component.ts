@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/services/book.service';
 import { ToastrService } from 'ngx-toastr';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 
 SwiperCore.use([Navigation, Pagination]);
@@ -19,18 +20,28 @@ export class LivroComponent implements OnInit {
   detalhesLivro: any; // Altere o tipo conforme a estrutura real do seu livro
   opinioesLivro: any;
   erroAoCarregarDetalhes: boolean = false;
+  mostrarModal: boolean = false;
+  opiniaoForm: FormGroup;
   
 
   constructor(
     private route: ActivatedRoute, 
     private bookService: BookService,
     private toastr: ToastrService,
+    private fb: FormBuilder
     ) {}
 
   ngOnInit() {
     this.livroId = this.route.snapshot.paramMap.get('id');
     this.carregarDetalhesDoLivro();
     this.carregarOpinioesDoLivro();
+    this.opiniaoForm = this.fb.group({
+      // Defina seus controles de formulário aqui
+      text: ['', Validators.required],
+      book_id: [{ value: this.livroId }],
+      predict: [0],
+      classification: ['']
+    });
   }
 
   carregarDetalhesDoLivro() {
@@ -68,6 +79,40 @@ export class LivroComponent implements OnInit {
     console.log(value)
     return value; // Converte para número
   }
-  
+
+  exibirModalOpiniao(): void {
+    this.mostrarModal = true;
+    // Resetar o formulário ou inicializar valores padrão, se necessário
+    this.opiniaoForm.reset();
+  }
+
+  fecharModal(): void {
+    // Fecha o modal
+    this.mostrarModal = false;
+  }
+
+  enviarOpiniao() {
+
+    if (this.opiniaoForm.valid){
+      const opiniao = this.opiniaoForm.value;
+      const payload = { ...opiniao, book_id: this.livroId };
+
+      this.bookService.enviarOpiniao(payload).subscribe(
+        (response) => {
+          this.toastr.success('Comentário adicionado com sucesso', 'Sucesso');
+          // Recarregar a tela
+          location.reload();
+        },
+        (error) => {
+          // Lógica para tratar erros
+          console.error('Erro ao enviar comentário:', error);
+        }
+      );
+
+    }
+
+    
+  }
+
 
 }

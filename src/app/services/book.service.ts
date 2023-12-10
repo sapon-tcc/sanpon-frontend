@@ -32,4 +32,8 @@ export class BookService {
   getOpinion(livroId: string): Observable<any> {
     return this.http.get<Book>(`${this.apiBookOpinions}/${livroId}`)
   }
+
+  enviarOpiniao(opiniao: any): Observable<any> {
+    return this.http.post<any>(`${this.apiBookOpinions}`, opiniao);
+  }
 }
