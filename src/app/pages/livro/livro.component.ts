@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { BookService } from 'src/app/services/book.service';
 import { ToastrService } from 'ngx-toastr';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -10,13 +12,14 @@ SwiperCore.use([Navigation, Pagination]);
   selector: 'app-livro',
   templateUrl: './livro.component.html',
   styleUrls: ['./livro.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class LivroComponent implements OnInit {
   livroId: string;
   detalhesLivro: any; // Altere o tipo conforme a estrutura real do seu livro
   opinioesLivro: any;
   erroAoCarregarDetalhes: boolean = false;
+  
 
   constructor(
     private route: ActivatedRoute, 
@@ -60,5 +63,11 @@ export class LivroComponent implements OnInit {
       }
     );
   }
+
+  convertToNumber(value: any): number {
+    console.log(value)
+    return value; // Converte para número
+  }
+  
 
 }

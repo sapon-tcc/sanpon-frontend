@@ -20,6 +20,8 @@ import { LoadingComponent } from './pages/loading/loading.component';
 import { SearchBarComponent } from './pages/search/search.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { LivroComponent } from './pages/livro/livro.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 
 
@@ -46,8 +48,8 @@ import { LivroComponent } from './pages/livro/livro.component';
     ProgressSpinnerModule,
     SwiperModule,
     BrowserAnimationsModule,
+    MatProgressBarModule,
     ToastrModule.forRoot(),
-
   ],
   providers: [
       {
