@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://sanpon.onrender.com/api/v1'; // Substitua pela URL real do seu backend
+  private apiUrl = 'http://ec2-52-70-194-31.compute-1.amazonaws.com/api/v1'; // Substitua pela URL real do seu backend
 
   constructor(private http: HttpClient) {}
 

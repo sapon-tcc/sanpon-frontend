@@ -9,10 +9,10 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class BookService {
-  private apiBook = 'https://sanpon.onrender.com/api/v1/books';
-  private apiBookSeggestion = 'https://sanpon.onrender.com/api/v1/suggestion';
-  private apiBookDetail = 'https://sanpon.onrender.com/api/v1/books';
-  private apiBookOpinions = 'https://sanpon.onrender.com/api/v1/books/opinion';
+  private apiBook = 'http://ec2-52-70-194-31.compute-1.amazonaws.com/api/v1/books';
+  private apiBookSeggestion = 'http://ec2-52-70-194-31.compute-1.amazonaws.com/api/v1/suggestion';
+  private apiBookDetail = 'http://ec2-52-70-194-31.compute-1.amazonaws.com/api/v1/books';
+  private apiBookOpinions = 'http://ec2-52-70-194-31.compute-1.amazonaws.com/api/v1/books/opinion';
 
   constructor(private http: HttpClient) { }
 
